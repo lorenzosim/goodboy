@@ -1,7 +1,7 @@
 # Good Boy
 
 Good Boy is a Game Boy (DMG) emulator written in Go.
-Mostly a work in progress, but good enough to play some popular games (Tetris, Super Mario Land, Donkey Kong Land, ...).
+Mostly a work in progress, but good enough to play some popular games (Tetris, Super Mario Land, Donkey Kong, ...).
 
 ![goodboy screenshot](https://github.com/user-attachments/assets/21f6b4f8-83fb-45f7-be59-1bb50466a015)
 
@@ -9,12 +9,12 @@ Mostly a work in progress, but good enough to play some popular games (Tetris, S
 
 From source:
 ```code 
-$ go run . [rom file]
+go run . [rom file]
 ```
 
 Using a pre-built binary:
 ```code
-$ goodboy [rom file]
+goodboy [rom file]
 ```
 
 Play with <kbd>&larr;</kbd>, <kbd>&uarr;</kbd>, <kbd>&darr;</kbd>, <kbd>&rarr;</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>Enter</kbd>, <kbd>R Shift</kbd>.
