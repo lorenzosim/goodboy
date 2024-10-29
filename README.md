@@ -23,11 +23,12 @@ The emulator has a built-in textual debugger and tracer (use `-debug` and `-trac
 
 ## Features & TODOs
 
-- [x] CPU, timer, interrupt, graphics, joypad, sound
+- [x] CPU, timer, interrupt, graphics, joypad
 - [x] Cartridge types: ROM-only, MBC1
 - [x] Built-in debugger
 - [x] Pass Blargg's cpu_instrs, instr_timing, mem_timing, mem_timing-2
 - [x] Pass [dmg-acid2](https://github.com/mattcurrie/dmg-acid2) test
+- [ ] Serial, Sound
 - [ ] PPU timing (currently rendering any line takes 172 dots)
 - [ ] Support more cartridge types (MBC3, MBC5, ...)
 - [ ] Pass more Blargg tests, Mooneye, etc
