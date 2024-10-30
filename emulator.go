@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+const clockFreq = 1_048_576
+
 // A Ticker is a system that advances every time Tick is called
 type Ticker interface {
 	Tick()
@@ -68,7 +70,7 @@ func MakeEmulator(bootRom []byte, rom []byte, debug bool, trace bool, pixelSette
 
 // Run runs the emulator. Blocking.
 func (e *Emulator) Run() {
-	targetCycleDuration := time.Second / 1_048_576 // Clock is 1Mhz
+	targetCycleDuration := time.Second / clockFreq
 	startTime := time.Now()
 	var endTime time.Time
 	for {
@@ -85,6 +87,8 @@ func (e *Emulator) Tick() {
 	e.cpu.Tick()
 	e.dma.Tick()
 	e.timer.Tick()
+	e.apu.Tick()
+	e.apu.Tick()
 
 	// The PPU works at 4Mhz, so call it 4 times per tick
 	e.ppu.Tick()

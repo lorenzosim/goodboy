@@ -42,7 +42,6 @@ func (g *Game) Update() error {
 			return err
 		}
 		g.audioPlayer.SetBufferSize(audioBufferSize)
-		g.audioPlayer.SetVolume(0.02)
 		g.audioPlayer.Play()
 	}
 
